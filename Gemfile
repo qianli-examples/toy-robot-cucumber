@@ -1,2 +1,2 @@
 gem 'cucumber'
-gem 'pry'
+gem 'pry-byebug'
