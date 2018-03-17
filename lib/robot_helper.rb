@@ -7,3 +7,15 @@ class OffTheBoardException < StandardError
 		super(warning_message)
 	end
 end
+
+def transform_command_input(cmd_input = "")
+	if cmd_input.empty?
+		cmd_input
+	else
+		cmd_input.strip.downcase.gsub(/[,.;':"!@#$%^&*`~'-]/, " ").squeeze
+	end
+end
+
+def exit_game?
+	transform_command_input(gets).include?("exit" || "quit")
+end

@@ -1,11 +1,6 @@
-a = $stdin.gets.chomp
-#a = ARGV
-puts a + "gagagagaga"
-
-def help_command
-  loop do
-    help = $stdin.gets.chomp
-    puts "ahahaha this is help hahahalalal" if help = '-h' | 'help' | '--help' | '-help'
-  end
-  Thread.new{help_command}
+require 'pry-byebug'
+require File.expand_path(File.dirname(__FILE__) + "/../lib/robot_helper.rb")
+require File.expand_path(File.dirname(__FILE__) + "/../lib/robot_helper.rb")
+until exit_game?
+	
 end
