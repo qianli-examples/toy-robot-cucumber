@@ -1,6 +1,27 @@
 # toy-robot-cucumber
+
 This is a popular code challenge. For this project I use BDD to drive the development with Ruby as programming language.
 
+
+## How to test
+
+Download or clone the repository. Recommend use Ruby 2.50. 
+
+`cd YOURREPOSITORYPATH`
+
+`bundle install`
+
+`cucumber`
+
+## How to play
+
+Download or clone the repository. Recommend use Ruby 2.50. 
+
+`cd YOURREPOSITORYPATH`
+
+`bundle install`
+
+`ruby lib/cmd_play.rb`
 
 ***
 **Description of the code challenge**
