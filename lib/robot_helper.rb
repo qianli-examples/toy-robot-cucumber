@@ -8,14 +8,14 @@ class OffTheBoardException < StandardError
 	end
 end
 
-def transform_command_input(cmd_input = "")
-	if cmd_input.empty?
-		cmd_input
-	else
-		cmd_input.strip.downcase.gsub(/[,.;':"!@#$%^&*`~'-]/, " ").squeeze
-	end
+def transform_command_input(cmd_input)
+	cmd_input.strip.downcase.gsub(/\W/, " ").squeeze
 end
 
-def exit_game?
-	transform_command_input(gets).include?("exit" || "quit")
+def exit_game?(formatted_cmd_input = "")
+	formatted_cmd_input.include?("exit") || formatted_cmd_input.include?("quit")
+end
+
+def matched_pattern_string(pattern, original)
+	pattern.match(original).to_s
 end
